@@ -10,6 +10,11 @@ namespace MeetingRoomSetup
 {
     public partial class ThisAddIn
     {
+        protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            return new CustomAppointmentRibbon();
+        }
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
         }
